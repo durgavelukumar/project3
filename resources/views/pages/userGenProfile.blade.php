@@ -8,14 +8,11 @@
 	
 @section('content')
 	
-<?php $generator = new Badcow\LoremIpsum\Generator();?>
-<?php $paragraphs = $generator->getParagraphs($nbrOfParagraphs);?>
-<?php echo implode('<p><b>', $paragraphs), '</b>';  ?>
-
+<?php $faker = Faker\Factory::create();?>
+<?php
+for ($i=0; $i < $nbrOfUsers; $i++) {
+  echo $faker->name, "<br>";
+}
+?>
 @stop
-
-
- 
-
-
 

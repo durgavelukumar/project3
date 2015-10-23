@@ -9,18 +9,18 @@
 
 @section('content')
 	<b>
-	<form method='POST' action='/lorem'>
+	<form method='POST' action='/userGen'>
 		<input type='hidden' name='_token' value='{{ csrf_token() }}'>
-	    <label for="nbrOfParagraphs">Number of Paragraphs:</label>
-		 <input id="nbrOfParagraphs" type="text" name="nbrOfParagraphs" maxlength="3" size="1" value=
+	    <label for="nbrOfParagraphs">How many users do you need?</label>
+		 <input id="nbrOfParagraphs" type="text" name="nbrOfUsers" maxlength="3" size="1" value=
                 <?php
-                    if (!isset($_POST["nbrOfParagraphs"]))
+                    if (!isset($_POST["nbrOfUsers"]))
                         echo "5"; 
                     else
-                        echo $_POST["nbrOfParagraphs"];
+                        echo $_POST["nbrOfUsers"];
                 ?>>
-            
-        <input id="see_Paragraphs" type="submit" value="Get Paragraphs">
+        <br>    
+        <input id="see_Users" type="submit" value="Get Users">
 	</b>
 </form>
 
